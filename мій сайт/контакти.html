@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Контакти - Сайт Влада</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Мій логотип">
+            <h1>Влад | Дизайнер & Розробник</h1>
+        </div>
+        <button class="theme-switch" id="theme-toggle">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="головна.html">Головна</a></li>
+            <li><a href="про мене.html">Про мене</a></li>
+            <li><a href="портфаліо.html">Портфоліо</a></li>
+            <li><a href="контакти.html" class="active">Контакти</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+    
+    <h2 class="page-title">Зв'яжіться зі мною</h2>
+    <p style="text-align: center; max-width: 600px; margin: -20px auto 40px auto;">
+        Маєте цікавий проєкт, запитання чи просто хочете привітатися? Я завжди відкритий до спілкування. Заповніть форму нижче, і я відповім вам якомога швидше.
+    </p>
+
+    <div class="form-container">
+        <form action="#" method="post" name="comment-form" id="comment-form">
+            <p>
+                <label for="author">Ваше ім’я:</label>
+                <input type="text" name="author" id="author" size="25" required>
+            </p>
+            <p>
+                <label for="email">Ваш Email:</label>
+                <input type="email" name="email" id="email" size="25" required>
+            </p>
+            <p>
+                <label for="comment-text">Повідомлення:</label>
+                <textarea name="comment" id="comment-text" cols="48" rows="8" required></textarea>
+            </p>
+            <p>
+                <input type="submit" id="submit" value="Надіслати">
+            </p>
+        </form>
+    </div>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Влад. Всі права захищено.</p>
+    </div>
+</footer>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+</script>
+
+</body>
+</html>

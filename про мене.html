@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <title>Про мене - Сайт Влада</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <div class="logo-container">
+            <img src="images/logo.jpg" alt="Мій логотип">
+            <h1>Влад | Дизайнер & Розробник</h1>
+        </div>
+        <button class="theme-switch" id="theme-toggle">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+        </button>
+    </div>
+</header>
+
+<nav>
+    <div class="container">
+        <ul>
+            <li><a href="головна.html">Головна</a></li>
+            <li><a href="про мене.html" class="active">Про мене</a></li>
+            <li><a href="портфаліо.html">Портфоліо</a></li>
+            <li><a href="контакти.html">Контакти</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container">
+
+    <h2 class="page-title">Моя історія</h2>
+
+    <section class="content-row">
+        <div class="text-col">
+            <h3>Хто я?</h3>
+            <p>Привіт ще раз! Мене звати Влад, я студент з міста Луцьк. Мій шлях у світ технологій та дизайну почався з простої цікавості, яка швидко переросла у справжню пристрасть. Я обожнюю процес вирішення проблем — чи то розробка логіки на Python, чи створення ідеального макету в Figma.</p>
+        </div>
+        <div class="image-col">
+            <img src="images/1.jpg" alt="Моє фото">
+        </div>
+    </section>
+
+    <section class="content-row reverse">
+        <div class="text-col">
+            <h3>Пристрасть до Дизайну</h3>
+            <p>Мій основний інтерес — це графічний та веб-дизайн. Я впевнено володію "Adobe Photoshop" для створення растрової графіки та "Figma" для проєктування інтерфейсів. Мене захоплює, як правильне поєднання кольорів, типографіки та композиції може вплинути на сприйняття продукту.</p>
+        </div>
+        <div class="image-col">
+            <img src="images/14.jpg" alt="Процес дизайну">
+        </div>
+    </section>
+
+    <section class="content-row">
+        <div class="text-col">
+            <h3>Технічна сторона</h3>
+            <p>Дизайн — це чудово, але я також розумію важливість його втілення. Я вивчаю "HTML" та "CSS" (цей сайт — приклад моєї практики!), а також "Python" для вирішення складніших завдань. Це поєднання креативу та логіки мене найбільше драйвить.</p>
+        </div>
+        <div class="image-col">
+            <img src="images/3.jpg" alt="Код на екрані">
+        </div>
+    </section>
+    
+    <section class="content-row reverse">
+        <div class="text-col">
+            <h3>Поза роботою</h3>
+            <p>Життя — це не лише код та дизайн! У вільний час я люблю "перезавантажити" мозок за допомогою комп'ютерних ігор, гуляти з друзями та шукати натхнення у навколишньому світі. Я планую розвивати свої навички, щоб у майбутньому відкрити власну справу.</p>
+        </div>
+        <div class="image-col">
+            <img src="images/4.jpg" alt="Моє хобі">
+        </div>
+    </section>
+    
+    <section>
+        <h2 class="page-title">Мій набір інструментів</h2>
+        <ul class="skills-list">
+            <li>Adobe Photoshop</li>
+            <li>Figma</li>
+            <li>Python (Основи)</li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Влад. Всі права захищено.</p>
+    </div>
+</footer>
+
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme');
+    if (currentTheme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
+    themeToggle.addEventListener('click', () => {
+        let theme = document.documentElement.getAttribute('data-theme');
+        if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
+</script>
+
+</body>
+</html>
